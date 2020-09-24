@@ -3,7 +3,6 @@ import pjsua as pj
 import threading
 import bothelper as bot
 import time
-
 current_call = None
 recorderid = None
 playerid = None
@@ -59,7 +58,7 @@ def listen_and_respond():
     lib.conf_connect(call_slot, recorderslot)
 
     # Listen for 8 seconds, naive implementation
-    time.sleep(2)
+    time.sleep(20)
 
     lib.recorder_destroy(recorderid)
     mybot = bot.BotHelper()
